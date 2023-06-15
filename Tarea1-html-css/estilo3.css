@@ -1,8 +1,9 @@
 /*Deben estilizar el fondo, la lista de películas, la imagen y el argumento*/
 body {
-    background-color: whitesmoke;
+    background-color: rgb(36, 30, 77);
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    font-stretch: ultra-expanded;
     color: salmon;
 }
 
@@ -13,6 +14,7 @@ ol {
 
 li {
     padding-bottom: 10px;
+    text-decoration-line: underline;
 }
 
 ol li {
@@ -22,7 +24,7 @@ ol li {
 ol li::before {
     content: counter(steps);
     margin-right: 0.5rem;
-    background: rgb(68, 1, 62);
+    background: salmon;
     color: white;
     width: 1.2em;
     height: 1.2em;
@@ -33,14 +35,15 @@ ol li::before {
 }
 
 img {
-    border: 1px solid #680663;
+    border: 1px solid salmon;
     border-radius: 4px;
     padding: 5px;
     width: 250px;
-    background-color: blueviolet;
+    background-color: salmon;
+    filter: drop-shadow(0 0 5px salmon);
 }
 
 .argumento {
     max-width: 40%;
-    text-align: left;
+    text-align: right;
 }
