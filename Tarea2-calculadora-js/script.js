@@ -5,6 +5,7 @@ function calcular() {
   const operador2 = +getElementById("op2");
   
   // sumarlos
+  let resultado;
   switch(operacion) {
     case "suma":
       resultado = operador1 + operador2;
