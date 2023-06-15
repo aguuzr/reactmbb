@@ -1,12 +1,25 @@
 function calcular() {
   // recuperar los valores de la página
-  var operacion = document.getElementById("operaciones").value;
-  var operador1 = Number(document.getElementById("op1").value);
-  var operador2 = Number(document.getElementById("op2").value);
+  const operacion = getElementById("operaciones");
+  const operador1 = +getElementById("op1");
+  const operador2 = +getElementById("op2");
+  
   // sumarlos
-  if (operacion === "suma") {
-    document.getElementById("resultado").innerHTML = operador1 + operador2;
-  } else {
-    document.getElementById("resultado").innerHTML = operador1 * operador2;
+  switch(operacion) {
+    case "suma":
+      resultado = operador1 + operador2;
+      updateOperationResult(resultado);
+      break;
+    case "multiplicacion":
+      resultado = operador1 * operador2;
+      updateOperationResult(resultado);
   }
+}
+
+function getElementById(id) {
+  return document.getElementById(id).value;
+}
+
+function updateOperationResult(resultado) {
+  document.getElementById("resultado").innerHTML = resultado;
 }
