@@ -1,28 +1,23 @@
 let peliculas = ['shrek','luca','encanto','inside+out'];
 
 function buscar() {
-    fetch('http://www.omdbapi.com/?apikey=4ee84151&t=shrek')
-    .then(response => response.json())
-    .then(data => {
-        //console.log(data);
-        document.getElementById("card0").src = data.Poster;
-    });    
-    fetch('http://www.omdbapi.com/?apikey=4ee84151&t=luca')
-    .then(response => response.json())
-    .then(data => {
-        //console.log(data);
-        document.getElementById("card1").src = data.Poster;
-    });
-    fetch('http://www.omdbapi.com/?apikey=4ee84151&t=encanto')
-    .then(response => response.json())
-    .then(data => {
-        //console.log(data);
-        document.getElementById("card2").src = data.Poster;
-    });
-    fetch('http://www.omdbapi.com/?apikey=4ee84151&t=inside+out')
-    .then(response => response.json())
-    .then(data => {
-        //console.log(data);
-        document.getElementById("card3").src = data.Poster;
-    });
+
+    let url = 'http://www.omdbapi.com/?apikey=4ee84151&t=';
+
+    for(let i = 0; i < peliculas.length; i++) {
+        let url_pelicula = url+peliculas[i];
+        //console.log(url_pelicula)
+        fetch(url_pelicula)
+        .then(response => response.json())
+        .then(data => {
+            //console.log(data);
+            let card_id = 'card'+i;
+            let title_id = 'title'+i;
+            let desc_id = 'desc'+i;
+            
+            document.getElementById(card_id).src = data.Poster;
+            document.getElementById(title_id).innerHTML = data.Title;
+            document.getElementById(desc_id).innerHTML = data.Plot;
+        })
+    }
 }
