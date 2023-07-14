@@ -33,7 +33,7 @@
     // Además debemos mostrar un poster al azar de la lista de peliculas.
     // Al ser al azar, el poster podrá cambiar cada vez que refrescamos la página.
 
-    const random = Math.floor((Math.random() * peliculas.length)) + 1;
+    const random = Math.floor((Math.random() * peliculas.length));
     const titulo = peliculas[random].titulo;
 
     const url = new URL('http://www.omdbapi.com/?apikey=4ee84151');
