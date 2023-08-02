@@ -2,12 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import PeliAzar from './PeliAzar'
+import Poster from './Poster'
+import Trailer from './Trailer'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <PeliAzar/>
+    <Poster titulo="nombre_pelicula"></Poster>
+    <Trailer/>
   </React.StrictMode>
 );
 
