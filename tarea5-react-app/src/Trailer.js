@@ -1,10 +1,18 @@
 function Trailer() {
-    return(
-        <div>
-            <h1>TRAILER</h1>
-            <p>muestra incrustado un video de un trailer de una película que elijan. Aqui es siempre el mismo trailer, pero si lo quieren parametrizar como el componente anterior, mejor</p>
-        </div> 
-    )
+  return (
+    <div>
+      <h3>TRAILER</h3>
+      <iframe
+        width="1520"
+        height="578"
+        src="https://www.youtube.com/embed/MVvGSBKV504"
+        title="OPPENHEIMER - Tráiler Oficial - Subtitulado - (Universal Studios) - HD"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  );
 }
 
 export default Trailer;
