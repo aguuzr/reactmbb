@@ -1,10 +1,22 @@
+const peliculas = [
+  { titulo: "Top Gun", link: "https://www.imdb.com/title/tt0092099/" },
+  { titulo: "Top Gun", link: "https://www.imdb.com/title/tt0092099/" },
+  { titulo: "Top Gun", link: "https://www.imdb.com/title/tt0092099/" },
+  { titulo: "Top Gun", link: "https://www.imdb.com/title/tt0092099/" },
+  { titulo: "Top Gun", link: "https://www.imdb.com/title/tt0092099/" },
+];
+
+const index = Math.floor(Math.random() * peliculas.length);
+
 function PeliAzar() {
-    return(
-        <div>
-            <h1>PELI AZAR</h1>
-            <p>muestra únicamente el título y un link a IMDB de una película al azar, de al menos 5 películas "harcodeadas" en un arreglo dentro del componente.</p>
-        </div>        
-    )
+  return (
+    <div>
+      <h1>{peliculas[index].titulo}</h1>
+      <a href={peliculas[index].link} target="_blank" rel="noreferrer noopener">
+        ver en IMDB
+      </a>
+    </div>
+  );
 }
 
 export default PeliAzar;
